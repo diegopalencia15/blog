@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>
+    Listar todos los posts {{posts|length}}
+  </h3>
+  <ul>
+    {% for post in posts %}
+    <li>
+      {{post.titulo}}
+    </li>
+    {% endfor %}
+  </ul>
+  <hr>
+  <h3>
+    Listar todos los posts que tengan adso
+  </h3>
+  <ul>
+    {% for post in filtro %}
+    <li>
+      {{post.titulo}}
+    </li>
+    {% endfor %}
+  </ul>
+  <hr>
+  <h3>
+    Listar un dato
+  </h3>
+  <ul>
+    la fecha es {{post.fecha}} y el titulo es {{post.titulo}}
+  </ul>
+  <hr>
+  <h3>
+    Listar los dos primeros posts {{limite|length}}
+  </h3>
+  <ul>
+    {% for post in limite %}
+    <li>
+      {{post.titulo}}
+    </li>
+    {% endfor %}
+  </ul>
+  <hr>
+  <h3>
+    Listar del 2 al 4 posts {{limite2|length}}
+  </h3>
+  <ul>
+    {% for post in limite2 %}
+    <li>
+      {{post.id}}
+    </li>
+    {% endfor %}
+  </ul>
+  <hr>
+  <h3>
+    Listar los posts por orden de cuerpo {{ordenar|length}}
+  </h3>
+  <ul>
+    {% for post in ordenar %}
+    <li>
+      {{post.cuerpo}}
+    </li>
+    {% endfor %}
+  </ul>
+  <h3>
+    Listar los posts menores o igual a 20 {{menor|length}}
+  </h3>
+  <ul>
+    {% for post in menor %}
+    <li>
+      {{post.id}}
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>

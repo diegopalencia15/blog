@@ -8,4 +8,6 @@ urlpatterns = [
     path('modificar/<int:id>/<str:titulo>/',views.modificar,name="modificar"),
     path('eliminar/<int:id>',views.eliminar,name="eliminar"),
     path('storage_autor/<str:nombre>/<str:correo>/',views.storage_autor   ,name="storage_autor"),
+    path('consultas',views.consultas,name="consultas"),
+
 ]
